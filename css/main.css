@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+@use './_minireset.min.css';
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 6em;
+}
+
+.card {
+  background: #1b1938;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25em;
+  height: 55em;
+}
+
+.card .container .hero-img {
+  width: 100%;
+  height: 17em;
+  background-color: #aa5cdb;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.card .container .aside .tagline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.card .container .aside .tagline .tagline--header {
+  color: white;
+  margin: 1em 1.5em;
+}
+
+.card .container .aside .tagline .tagline--header .purple {
+  color: #aa5cdb;
+}
+
+.card .container .aside .tagline .tagline--subtext {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: auto 3.5em;
+}
+
+.card .container .aside .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.card .container .aside .stats .stat .stats--number {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card .container .aside .stats .stat .stats--number .number {
+  margin: 1em auto 0 auto;
+}
+
+.card .container .aside .stats .stat .stats--type {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card .container .aside .stats .stat .stats--type .type {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #1b1938;
+  color: white;
+  font-size: .7rem;
+  text-align: center;
+}
+
+footer a {
+  color: pink;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 80em;
+    height: 35em;
+    margin: 10em;
+  }
+  .card .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% 45%;
+        grid-template-columns: 55% 45%;
+    height: 100%;
+    width: 100%;
+  }
+  .card .container .hero-img {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    background: url("../images/image-header-desktop.jpg");
+    background-blend-mode: multiply;
+    background-color: #aa5cdb;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .card .container .aside .tagline {
+    grid-column: 2 / span;
+    margin: 1em auto;
+    text-align: left;
+  }
+  .card .container .aside .tagline .tagline--header {
+    font-size: 3rem;
+  }
+  .card .container .aside .tagline .tagline--subtext {
+    font-size: 1.3rem;
+  }
+  .card .container .aside .stats {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 2em 5em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
